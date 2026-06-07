@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - optimize-hahu-sequence
+      - feature/bulletproof-html
   workflow_dispatch:
 
 permissions:
