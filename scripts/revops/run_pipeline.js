@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { getMicrolinkData } = require('./microlink_client');
+const { searchSocialProfiles } = require('./searxng_client');
+const { scrapeDo } = require('./scrape_do_client');
 
 function loadEnv() {
   let envPath = path.resolve(__dirname, '../../.env.local');
@@ -49,10 +52,10 @@ async function main() {
   console.log(`🚀 Starting audit pipeline for ${url} in niche "${niche}"...`);
   console.log(`📁 Scrape output target: ${scrapePath}`);
 
-  // Step 1: Run crawl
-  console.log('\n--- STEP 1: FIRECRAWL SCRAPE ---');
+  // Step 1: Run LibreCrawl
+  console.log('\n--- STEP 1: LIBRECRAWL SCRAPE ---');
   try {
-    execSync(`node "${path.join(__dirname, 'firecrawl_extract.js')}" --url "${url}" --output "${scrapePath}"`, {
+    execSync(`node "${path.join(__dirname, 'librecrawl_extract.js')}" --url "${url}" --output "${scrapePath}"`, {
       stdio: 'inherit',
       env: process.env
     });
@@ -61,11 +64,36 @@ async function main() {
     process.exit(1);
   }
 
+  // Step 1B: Advanced API Extraction
+  console.log('\n--- STEP 1B: ADVANCED EXTRACTION (Microlink, SearxNG, Scrape.do) ---');
+  const advancedDataPath = scrapePath.replace('.md', '_advanced.json');
+  try {
+    const derivedCompanyName = urlClean.replace('https://', '').replace('http://', '').replace('www.', '').split('.')[0];
+    const microlinkData = await getMicrolinkData(url);
+    const socialProfiles = await searchSocialProfiles(derivedCompanyName);
+    
+    let scrapeDoData = {};
+    if (socialProfiles.instagram) {
+       scrapeDoData.instagram = await scrapeDo(socialProfiles.instagram);
+    }
+    if (socialProfiles.facebook) {
+       scrapeDoData.facebook = await scrapeDo(socialProfiles.facebook);
+    }
+    
+    fs.writeFileSync(advancedDataPath, JSON.stringify({ microlink: microlinkData, socialProfiles, scrapeDoData }, null, 2));
+    console.log(`✅ Advanced data saved to ${advancedDataPath}`);
+  } catch (err) {
+    console.error('⚠️ Step 1B failed (non-fatal):', err.message);
+    fs.writeFileSync(advancedDataPath, JSON.stringify({}, null, 2));
+  }
+
+
+
   // Step 2: Run analysis
   console.log('\n--- STEP 2: OPENROUTER ANALYSIS & SUPABASE COMMIT ---');
   let auditId = null;
   try {
-    const output = execSync(`node "${path.join(__dirname, 'openrouter_analyze.js')}" --input "${scrapePath}" --niche "${niche}" --location "${location}"`, {
+    const output = execSync(`node "${path.join(__dirname, 'openrouter_analyze.js')}" --input "${scrapePath}" --advanced "${advancedDataPath}" --niche "${niche}" --location "${location}"`, {
       env: process.env,
       encoding: 'utf8'
     });
