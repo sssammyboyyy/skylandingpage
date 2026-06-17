@@ -25,27 +25,35 @@
   "audit": [
     {
       "priority": "critical",
-      "priorityTag": "Critical",
+      "priorityTag": "VLM Visual Finding: Critical",
       "number": "01",
-      "title": "Outdated, high-friction lead capture",
-      "description": "When a homeowner or business lands on your site, they are forced to use a slow contact form. In 2026, buyers expect instant gratification. If they don't get an immediate response, they will message the next company on Google.",
-      "fix": "<strong>What we'll do:</strong> Deploy a frictionless WhatsApp widget and an AI-driven instant responder so leads get an immediate, human-like response 24/7. No lead goes cold."
+      "title": "Severe Mobile Layout Shifts & Clutter",
+      "description": "Visual analysis reveals heavy image sliders dominating the mobile viewport, pushing critical value propositions below the fold. Users are met with overwhelming directory-style text instead of clear visual hierarchy, causing a 6.5s load penalty.",
+      "fix": "<strong>What we'll do:</strong> Implement a 'hero-centric' Next.js architecture with optimized WebP images, stripping away the heavy carousels to achieve a sub-1.5s mobile load time with immediate visual clarity."
     },
     {
       "priority": "high",
-      "priorityTag": "High Impact",
+      "priorityTag": "VLM Visual Finding: High Impact",
       "number": "02",
-      "title": "Bleeding high-margin residential market share",
-      "description": "Competitors like Manley Blinds are aggressively running ads on high-intent searches (e.g., 'patio blinds Nelspruit'). By not capturing these active searches, you are handing high-margin domestic jobs to inferior competitors.",
-      "fix": "<strong>What we'll do:</strong> Launch targeted Google Search Campaigns specifically for high-margin products (shadeports, patio blinds). We will out-bid the competition where it hurts them most."
+      "title": "Outdated, High-Friction Lead Capture",
+      "description": "The visual journey forces homeowners to hunt for a contact form hidden deep in the navigation. In a high-intent market, if a buyer cannot click-to-chat instantly, they will bounce to Manley Blinds.",
+      "fix": "<strong>What we'll do:</strong> Deploy a persistent, sticky WhatsApp widget with an AI-driven instant responder. We transform the site from a passive brochure into an active lead-generation engine."
     },
     {
       "priority": "opportunity",
-      "priorityTag": "Growth Opportunity",
+      "priorityTag": "VLM Visual Finding: Growth",
       "number": "03",
-      "title": "Unleveraged flawless reputation",
-      "description": "You have over 100 incredible 5-star reviews, but a new visitor to your site doesn't see them immediately. Trust is the currency of the internet, and right now, your trust signals are hidden.",
-      "fix": "<strong>What we'll do:</strong> Integrate live Google Review feeds directly above the fold on the new site. Instant social proof to instantly de-risk the purchase for the buyer."
+      "title": "Buried Social Proof & Trust Signals",
+      "description": "The VLM scan detects zero visible social proof on the primary landing path. The company has 107 flawless 5-star Google reviews, but they are entirely hidden from the initial buyer journey, neutralizing your biggest asset.",
+      "fix": "<strong>What we'll do:</strong> Integrate live Google Review feeds directly below the hero section. We will weaponize your 50-year legacy as instant social proof to immediately de-risk the purchase."
+    },
+    {
+      "priority": "opportunity",
+      "priorityTag": "VLM Visual Finding: Growth",
+      "number": "04",
+      "title": "B2B vs B2C Navigation Collision",
+      "description": "Industrial Safari Tent buyers and residential Patio Blind buyers are forced down the exact same visual funnel. This creates cognitive overload and decision fatigue for both audiences.",
+      "fix": "<strong>What we'll do:</strong> Build bifurcated landing paths ('Industrial' vs 'Domestic') straight from the hero section, ensuring each buyer segment receives a hyper-tailored, high-conversion visual experience."
     }
   ],
   "pillars": [
