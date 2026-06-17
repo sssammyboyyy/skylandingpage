@@ -1,0 +1,46 @@
+.social-proof {
+  background-color: white;
+}
+
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+.rating-summary {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 3rem;
+}
+
+.testimonial-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  padding: 3rem;
+  border-radius: 1rem;
+  border-left: 4px solid var(--primary-amber);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary-slate);
+  font-style: italic;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.testimonial-author strong {
+  font-size: 1.125rem;
+  color: var(--text-color);
+}
+
+.testimonial-author span {
+  color: #6b7280;
+}

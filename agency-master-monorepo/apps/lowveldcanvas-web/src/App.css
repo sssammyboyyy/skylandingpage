@@ -1,0 +1,24 @@
+.main-header {
+  background-color: white;
+  padding: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo strong {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary-amber);
+}
+
+.main-footer {
+  background-color: var(--primary-slate);
+  color: white;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}

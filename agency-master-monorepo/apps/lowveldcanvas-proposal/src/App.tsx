@@ -126,10 +126,46 @@ export default function App() {
             ))}
           </div>
 
+          {/* WhatsApp Flows */}
+          {clientData.whatsappFlows && (
+            <div className="mt-12">
+              <p className="text-sm font-bold text-gray-900 mb-1">{clientData.whatsappFlows.title}</p>
+              <p className="text-sm text-gray-500 mb-6">{clientData.whatsappFlows.subtitle}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {clientData.whatsappFlows.flows.map((flow, idx) => (
+                  <div key={idx} className="rounded-[18px] overflow-hidden shadow-lg bg-[#e5ddd5]">
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-blue-800 text-center py-2 bg-white/60 border-b border-black/10">
+                      {flow.scenario}
+                    </div>
+                    <div className="bg-[#128c7e] px-3 py-2.5 flex items-center gap-2.5">
+                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white shrink-0">🏭</div>
+                      <div>
+                        <div className="text-white font-bold text-[13px] leading-tight">{clientData.clientName}</div>
+                        <div className="text-white/70 text-[10px]">online</div>
+                      </div>
+                    </div>
+                    <div className="p-2.5 flex flex-col gap-1.5 h-64 overflow-y-auto">
+                      {flow.messages.map((msg, mIdx) => {
+                        if (msg.system) return <div key={mIdx} className="text-[10px] text-gray-500 text-center bg-black/5 px-2.5 py-1 rounded-full self-center italic my-1">{msg.system}</div>;
+                        const isOut = !!msg.out;
+                        return (
+                          <div key={mIdx} className={`max-w-[82%] px-2.5 py-1.5 rounded-lg text-[11.5px] leading-relaxed text-gray-800 ${isOut ? 'bg-[#dcf8c6] self-end rounded-tr-sm' : 'bg-white self-start rounded-tl-sm'}`}>
+                            {msg.out || msg.in}
+                            <div className="text-[9px] text-gray-400 text-right mt-0.5">{msg.time}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="bg-blue-50 border border-blue-100 rounded-xl p-6 mt-6 flex gap-4 items-start">
             <span className="text-2xl leading-none">⚡</span>
             <p className="text-sm text-gray-500 leading-relaxed">
-              <strong className="text-gray-900">How it all connects:</strong> The website provides the frictionless foundation → Google Ads capture high-intent buyers ready to purchase patio blinds → AI WhatsApp automates B2B scale and instant responses.
+              <strong className="text-gray-900">How it all connects:</strong> {clientData.whatsappFlows?.bannerText || "The website provides the frictionless foundation → Google Ads capture high-intent buyers ready to purchase patio blinds → AI WhatsApp automates B2B scale and instant responses."}
             </p>
           </div>
         </div>
@@ -260,6 +296,33 @@ export default function App() {
           <div className="text-[11px] font-bold uppercase tracking-widest text-blue-800 mb-3">Investment</div>
           <h2 className="text-4xl font-extrabold text-gray-900 mb-12 tracking-tight leading-tight">Clear packages.<br/>No hidden surprises.</h2>
 
+          {/* Website Only Package */}
+          {clientData.pricing.websiteOnly && (
+            <>
+              <div className="bg-white border-[1.5px] border-gray-200 rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-sm mb-4">
+                <div>
+                  <div className="inline-flex items-center gap-1.5 bg-red-50 text-red-700 border border-red-200 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">
+                    Once-Off · No Monthly Fee
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{clientData.pricing.websiteOnly.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed max-w-[480px]">
+                    {clientData.pricing.websiteOnly.desc}
+                  </p>
+                </div>
+                <div className="md:text-right shrink-0">
+                  <div className="text-4xl font-extrabold text-gray-900 tracking-tight leading-none mb-1">{clientData.pricing.websiteOnly.price}</div>
+                  <div className="text-xs text-gray-500 mb-4">{clientData.pricing.websiteOnly.note}</div>
+                  <a href={clientData.whatsappLink} className="inline-block bg-transparent text-blue-900 border-[1.5px] border-blue-900 hover:bg-blue-900 hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors whitespace-nowrap">
+                    Get My Website →
+                  </a>
+                </div>
+              </div>
+              <div className="text-center text-xs text-gray-400 tracking-wide py-4 flex items-center gap-4 before:content-[''] before:flex-1 before:h-px before:bg-gray-200 after:content-[''] after:flex-1 after:h-px after:bg-gray-200">
+                or choose a monthly growth package
+              </div>
+            </>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {clientData.pricing.tiers.map((tier, i) => (
               <div key={i} className={`relative p-8 rounded-3xl border shadow-sm ${tier.isFeatured ? 'bg-[#112240] border-[#112240] shadow-xl md:-mt-4 md:mb-4' : 'bg-white border-gray-200 mt-4'}`}>
@@ -285,12 +348,25 @@ export default function App() {
                     </li>
                   ))}
                 </ul>
-                <a href={clientData.whatsappLink} className={`block text-center font-bold text-sm px-5 py-3.5 rounded-xl transition-transform hover:-translate-y-px ${tier.isFeatured ? 'bg-green-600 text-white hover:bg-green-500' : 'bg-transparent text-blue-900 border-[1.5px] border-blue-900 hover:bg-blue-900 hover:text-white'}`}>
+                <a href={clientData.whatsappLink} className={`block text-center font-bold text-sm px-5 py-3.5 rounded-xl transition-transform hover:-translate-y-px ${tier.isFeatured ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-transparent text-blue-900 border-[1.5px] border-blue-900 hover:bg-blue-900 hover:text-white'}`}>
                   Select {tier.name}
                 </a>
               </div>
             ))}
           </div>
+
+          {clientData.pricing.budgetCallout && (
+            <div className="bg-[#f0a500]/10 border-[1.5px] border-[#f0a500]/30 rounded-xl p-6 mt-8 text-sm text-gray-600 leading-relaxed">
+              <span className="text-lg block mb-1.5">💳</span>
+              <strong className="text-gray-900">A note on Google Ads budget:</strong> {clientData.pricing.budgetCallout}
+            </div>
+          )}
+          
+          {clientData.pricing.valueNote && (
+            <div className="bg-blue-900/5 border-[1.5px] border-blue-900/10 rounded-xl p-6 mt-4 text-sm text-gray-600 leading-relaxed">
+              💡 <strong className="text-blue-800">{clientData.pricing.valueNote}</strong>
+            </div>
+          )}
         </div>
       </div>
 

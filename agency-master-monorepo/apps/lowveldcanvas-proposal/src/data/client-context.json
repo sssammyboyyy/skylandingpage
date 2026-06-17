@@ -145,6 +145,46 @@
       }
     ]
   },
+  "whatsappFlows": {
+    "title": "See it in action — three real scenarios",
+    "subtitle": "This is what Lowveld Canvas clients experience when they message you after the AI is switched on.",
+    "flows": [
+      {
+        "scenario": "Domestic Quote",
+        "messages": [
+          { "in": "Hi, I'm looking for a quote on patio blinds for my stoep", "time": "09:14" },
+          { "out": "Hi! Welcome to Lowveld Canvas 👋 We manufacture custom patio blinds right here in Nelspruit. Roughly how wide is the opening you need to cover?", "time": "09:14" },
+          { "in": "It's about 3 meters wide", "time": "09:15" },
+          { "out": "Perfect. For a 3m opening, we usually recommend our heavy-duty PVC blinds to handle the Lowveld storms. Would you like our team to come out for a free exact measurement?", "time": "09:15" },
+          { "in": "Yes please, that would be great", "time": "09:16" },
+          { "out": "Excellent. What is your name and address, and what day suits you best?", "time": "09:16" }
+        ]
+      },
+      {
+        "scenario": "Industrial B2B",
+        "messages": [
+          { "in": "We need custom tarpaulins for our logistics fleet", "time": "14:22" },
+          { "out": "Hi there. We specialize in heavy-duty logistics tarps. Are you looking for standard flat tarps, or tautliners?", "time": "14:22" },
+          { "in": "Tautliners for 3 superlinks", "time": "14:23" },
+          { "out": "Understood. Commercial fleet orders are handled directly by our production manager. Can I get your name and number so he can call you with pricing immediately?", "time": "14:23" },
+          { "in": "It's John - 083 555 1234", "time": "14:24" },
+          { "system": "Team notified — urgent B2B flag sent ✓" },
+          { "out": "Got it, John. Our production manager will call you within 10 minutes. 📞", "time": "14:24" }
+        ]
+      },
+      {
+        "scenario": "Follow-Up",
+        "messages": [
+          { "out": "Hi Sarah! 😊 Our installation team finished your patio blinds a few weeks ago. Are you happy with how they are holding up?", "time": "10:00" },
+          { "in": "Yes absolutely! They are fantastic, really block out the afternoon sun.", "time": "10:03" },
+          { "out": "That's wonderful to hear! If you have a quick minute, we'd hugely appreciate a Google review. It helps our local business immensely: [Review Link] ⭐", "time": "10:03" },
+          { "in": "Done! Just left a 5-star review.", "time": "10:05" },
+          { "out": "Thank you so much Sarah! Let us know if you ever need anything else. 👋", "time": "10:05" }
+        ]
+      }
+    ],
+    "bannerText": "The website gives clients a reason to choose Lowveld Canvas → the Google ads bring those clients to your site right when they're searching → the WhatsApp assistant makes sure every enquiry gets an instant reply and every lead stays engaged. Each piece makes the others work better."
+  },
   "roadmap": {
     "title": "The Execution Timeline",
     "subtitle": "Fast rollout. No disruption to your daily operations.",
@@ -198,6 +238,14 @@
     ]
   },
   "pricing": {
+    "websiteOnly": {
+      "title": "Website Only",
+      "price": "R7,500",
+      "note": "once-off · yours to keep",
+      "desc": "Just the website — nothing else. A professional, high-converting site built and handed over to you. No monthly commitment. Perfect if you want to start with the foundation."
+    },
+    "budgetCallout": "The fee in these packages covers everything we do — building your campaigns, writing the ads, and managing them month to month. The money that actually goes towards the ads is paid by you directly to Google. We recommend starting with R3,000–R5,000 per month for the ads themselves.",
+    "valueNote": "A single major patio blind or industrial tarp order covers the Growth package fee for several months. Think of it as the cost of gaining new clients — not a marketing expense.",
     "tiers": [
       {
         "name": "Foundation",
