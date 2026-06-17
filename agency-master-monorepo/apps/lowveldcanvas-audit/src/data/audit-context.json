@@ -1,0 +1,68 @@
+{
+  "clientName": "Lowveld Canvas",
+  "subtitle": "Comprehensive website, analytics, social media & Google Ads opportunity report",
+  "scores": [
+    { "label": "Website Score", "value": 23 },
+    { "label": "Analytics Setup", "value": 0 },
+    { "label": "SEO Readiness", "value": 15 },
+    { "label": "Social Presence", "value": 30 },
+    { "label": "Ads Readiness", "value": 0 }
+  ],
+  "sections": [
+    {
+      "id": "01",
+      "title": "Executive Summary",
+      "content": "Lowveld Canvas possesses the ultimate regional 'moat'—a 50+ year legacy, a massive industrial manufacturing floor, and an unblemished 5.0-star reputation. However, a significant gap has opened between the premium quality of the physical product and the outdated, high-friction digital experience. This gap is currently being exploited by agile retail competitors.\n\n- Contact Friction Score: 8/10 (High Danger). No WhatsApp widget, extending response time from seconds to hours.\n- Zero Tracking Infrastructure: No visibility into traffic or conversions.\n- Severe Performance Issues: 6.5s First Contentful Paint. 50%+ of traffic bounces before seeing the first banner.\n- Unrealized Asset: 107 flawless 5-star reviews are not dynamically integrated into the website's buying journey.\n- Cost of Inaction: R262,500 in lost pipeline revenue every single month."
+    },
+    {
+      "id": "02",
+      "title": "01 Company Overview",
+      "content": "**Lowveld Canvas HQ**\nMbombela, South Africa\n\n- Legacy: 50+ Years\n- Reputation: 107 Reviews, 5.0 Stars\n- Capacity: Massive in-house industrial fabrication floor\n\n**Core Product Categories**\nCustom Canvas, Patio Blinds, Luxury Safari Tents, Shadeports, Bakkie Canopies, Heavy Duty PVC."
+    },
+    {
+      "id": "03",
+      "title": "02 Website Audit",
+      "content": "**Critical finding:** The website functions as a dense, multi-layered directory for B2B services, creating a clunky, overwhelming mobile retail experience for B2C traffic. Heavy sliders destroy performance.\n\n**Technical Foundation**\n- Lighthouse Performance Score: 23/100 (Critical Danger)\n- First Contentful Paint: 6.5s\n- Live Chat / WhatsApp: None\n\n**Content Assessment**\n- Headline Structure: Generic. Fails to target pain points like sun/storm protection.\n- Reviews Integration: None. Users must hunt for social proof.\n\n**❌ Critical Gaps**\n- No localized schema markup.\n- No WhatsApp click-to-chat.\n- Image carousels are tanking mobile UX."
+    },
+    {
+      "id": "04",
+      "title": "03 Analytics & Tracking Audit",
+      "content": "There is no robust tracking infrastructure or modern conversion funnels built to separate B2B from B2C traffic.\n\n- Google Analytics 4: Not optimized for lead tracking.\n- Facebook / Meta Pixel: None detected.\n- Funnel Segmentation: Missing.\n\n**Recommended Tracking Stack**\n- Google Tag Manager (Immediate)\n- GA4 & Google Ads Conversion Tracking (Immediate)\n- Meta Pixel for Retargeting (Week 1)"
+    },
+    {
+      "id": "05",
+      "title": "04 SEO Audit",
+      "content": "**On-Page SEO Findings**\n- Meta Titles: Generic.\n- Schema / Structured Data: Missing localized schema markup, giving directory sites an edge.\n- Page Speed: A critical Google ranking factor is being damaged by the heavy hero sliders.\n\n**Off-Page & Local SEO**\n- Google Business Profile: Unmanaged. Reviews lack owner responses."
+    },
+    {
+      "id": "06",
+      "title": "05 Social Media Audit",
+      "content": "- Instagram (@lowveldcanvas): Active with excellent, authentic visual content (reels with 90+ views).\n\n**Critical Gap:** ZERO visual integration on the website. The site operates like a text-heavy directory instead of a dynamic visual portfolio, starving buyers of the visual proof they need to convert."
+    },
+    {
+      "id": "07",
+      "title": "06 Competitor Landscape",
+      "content": "| Competitor | Threat Level | Google/Meta Ads | WhatsApp UX | Design Quality | Differentiator |\n|---|---|---|---|---|---|\n| **Lowveld Canvas** | N/A | No | No | 3/5 | 50+ years, heavy fabrication floor |\n| **Manley Blinds** | High | Yes | Yes | 5/5 | Smart automation, automated funnels |\n| **Nelspruit Canvas & Shade** | Medium | No | No | 1/5 | Relies heavily on directory lead networks (Snupit/Procompare) |\n| **Lowveld Projects** | Medium | Unknown | Unknown | N/A | Local recognition, but lacks 100+ 5-star reviews |"
+    },
+    {
+      "id": "08",
+      "title": "07 Google Ads Campaign Strategy",
+      "content": "High-margin domestic revenue is bleeding to agile competitors like Manley Blinds and directory aggregators because they are intercepting the traffic.\n\n**Recommended Keyword Targets:**\n- Custom Canvas Nelspruit (High Intent)\n- Shadeports Mbombela (High Intent - Procompare ranking here currently)\n- Patio Blinds Nelspruit (High Intent - Manley Blinds highly active)\n- Luxury Safari Tents (Niche B2B - High opportunity for automated funnel)"
+    },
+    {
+      "id": "09",
+      "title": "08 Landing Page & Conversion Strategy",
+      "content": "The current website will leak ad spend. We must build dedicated landing pages with frictionless UX.\n\n**Conversion Elements Required:**\n- Sticky WhatsApp Widget.\n- Segmented Funnels (B2B Safari Lodges vs B2C Patio Blinds).\n- Dynamic Review Integration (Weaponizing the 107 5-star reviews).\n- Aspirational, lifestyle-focused imagery to close high-end domestic installations."
+    },
+    {
+      "id": "10",
+      "title": "09 Prioritised Action Plan",
+      "content": "The 'Pincer Movement' Strategy:\n\n1. **Neutralize Retail Competitors:** Remove contact friction by integrating WhatsApp directly into the site, separating B2B from B2C funnels, and modernizing the UI to match Manley Blinds.\n2. **Crush Directory Aggregators:** Weaponize the 107 5-star reviews to dominate local Map Pack rankings.\n3. **Automate Enterprise B2B:** Create a dedicated pipeline for high-value Safari Lodge and agricultural contracts."
+    },
+    {
+      "id": "11",
+      "title": "10 Marketable Differentiators",
+      "content": "What makes Lowveld Canvas genuinely different:\n\n- **50+ Year Manufacturing Legacy:** Absolute authority and trust.\n- **Massive In-House Industrial Fabrication Floor:** Eliminates middleman markups, allows absolute quality control and massive enterprise capacity.\n- **107 Flawless 5-Star Reviews:** An impenetrable moat of social proof. Once weaponized into a frictionless UX, price becomes a secondary concern."
+    }
+  ]
+}

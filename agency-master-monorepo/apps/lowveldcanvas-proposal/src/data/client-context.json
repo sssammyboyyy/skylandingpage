@@ -1,0 +1,169 @@
+{
+  "clientName": "Lowveld Canvas",
+  "whatsappLink": "https://wa.me/27795124292?text=Hi%20Jacques%2C%20I%27d%20like%20to%20accept%20the%20proposal%20for%20Lowveld%20Canvas",
+  "date": "June 2026",
+  "hero": {
+    "label": "🏭 Industrial & Domestic Domination",
+    "title": "The manufacturing is already flawless.<br/>Let's make sure <em>Mpumalanga knows it.</em>",
+    "subtitle": "Lowveld Canvas builds premium products. This proposal outlines the digital engine to make sure every homeowner and business in the province finds you first — and converts instantly.",
+    "meta": [
+      { "label": "Prepared by", "value": "Jacques Groenewald · JCE Media" },
+      { "label": "Prepared for", "value": "Lowveld Canvas · Nelspruit" },
+      { "label": "Valid until", "value": "14 June 2026" }
+    ]
+  },
+  "summary": {
+    "title": "Massive legacy.<br/>Hard to interact with online.",
+    "subtitle": "You have 50 years of experience, but your digital footprint is creating friction for modern buyers. Here is the reality:",
+    "stats": [
+      { "value": "R262,500", "description": "estimated pipeline revenue lost monthly to competitors who are faster to reply." },
+      { "value": "6.5s", "description": "mobile load time — meaning over 50% of visitors abandon the site before it even opens." },
+      { "value": "0", "description": "instant chat options. You rely entirely on slow contact forms, letting warm leads go cold." },
+      { "value": "107", "description": "flawless 5-star reviews that are completely hidden from your main landing page." }
+    ]
+  },
+  "audit": [
+    {
+      "priority": "critical",
+      "priorityTag": "Critical",
+      "number": "01",
+      "title": "Outdated, high-friction lead capture",
+      "description": "When a homeowner or business lands on your site, they are forced to use a slow contact form. In 2026, buyers expect instant gratification. If they don't get an immediate response, they will message the next company on Google.",
+      "fix": "<strong>What we'll do:</strong> Deploy a frictionless WhatsApp widget and an AI-driven instant responder so leads get an immediate, human-like response 24/7. No lead goes cold."
+    },
+    {
+      "priority": "high",
+      "priorityTag": "High Impact",
+      "number": "02",
+      "title": "Bleeding high-margin residential market share",
+      "description": "Competitors like Manley Blinds are aggressively running ads on high-intent searches (e.g., 'patio blinds Nelspruit'). By not capturing these active searches, you are handing high-margin domestic jobs to inferior competitors.",
+      "fix": "<strong>What we'll do:</strong> Launch targeted Google Search Campaigns specifically for high-margin products (shadeports, patio blinds). We will out-bid the competition where it hurts them most."
+    },
+    {
+      "priority": "opportunity",
+      "priorityTag": "Growth Opportunity",
+      "number": "03",
+      "title": "Unleveraged flawless reputation",
+      "description": "You have over 100 incredible 5-star reviews, but a new visitor to your site doesn't see them immediately. Trust is the currency of the internet, and right now, your trust signals are hidden.",
+      "fix": "<strong>What we'll do:</strong> Integrate live Google Review feeds directly above the fold on the new site. Instant social proof to instantly de-risk the purchase for the buyer."
+    }
+  ],
+  "pillars": [
+    {
+      "icon": "🌐",
+      "step": "Step 01 · Foundation",
+      "title": "A High-Performance Website",
+      "description": "A sub-1.5s load time, modern UI, and a clear separation between Industrial and Domestic catalogs. Built for conversion.",
+      "features": [
+        "Custom Next-Gen architecture",
+        "Sub-1.5s mobile load time",
+        "Industrial & Domestic separated paths",
+        "Frictionless WhatsApp integration",
+        "Live Google Review feeds",
+        "Full SEO optimization"
+      ]
+    },
+    {
+      "icon": "📣",
+      "step": "Step 02 · Growth",
+      "title": "Google Search Domination",
+      "description": "Targeting high-intent buyers exactly when they search for shadeports, blinds, and canvas repairs.",
+      "features": [
+        "Aggressive competitor keyword targeting",
+        "High-margin residential focus",
+        "Hyper-local radius targeting",
+        "A/B tested ad copy",
+        "Conversion tracking",
+        "Monthly ROI reporting"
+      ]
+    },
+    {
+      "icon": "🤖",
+      "step": "Step 03 · Scale · AI-Powered",
+      "title": "Full B2B Automation & Meta Ads",
+      "description": "AI-driven lead qualification and aggressive Meta retargeting to ensure every visitor turns into a conversation.",
+      "isFullWidth": true,
+      "features": [
+        "24/7 AI WhatsApp Responder",
+        "Automated B2B lead qualification",
+        "Instant routing of urgent requests",
+        "Meta Ads Retargeting (Facebook/Insta)",
+        "Lookalike audience targeting",
+        "Automated follow-ups on dead leads"
+      ]
+    }
+  ],
+  "demo": {
+    "oldUrl": "lowveldcanvas.co.za (Current)",
+    "newUrl": "lowveldcanvas.co.za (New Standard)",
+    "oldFeatures": [
+      "6.5s load time",
+      "Confusing navigation",
+      "Hidden reviews",
+      "Slow contact forms"
+    ],
+    "newFeatures": [
+      "Instant 1.2s load time",
+      "Clear Industrial vs Domestic paths",
+      "Live 5-star review integration",
+      "1-Click WhatsApp booking"
+    ],
+    "strategyTitle": "The Pincer Movement Strategy",
+    "strategyDesc": "We execute a two-front attack: On the right flank, we neutralize aggressive local competitors like Manley Blinds through superior Google Ad placement and risk-reversing guarantees. On the left flank, we crush directory aggregators by dominating organic SEO, ensuring Lowveld Canvas is the only logical choice."
+  },
+  "pricing": {
+    "tiers": [
+      {
+        "name": "Foundation",
+        "price": "R2,999",
+        "subtext": "/mo",
+        "setup": "Website build: R7,500 once-off · then ongoing monthly",
+        "features": [
+          { "text": "Custom High-Performance Website" },
+          { "text": "Sub-1.5s Load Time Optimization" },
+          { "text": "WhatsApp Integration" },
+          { "text": "Live Google Review Syndication" },
+          { "text": "Google Ads Management", "off": true },
+          { "text": "AI WhatsApp Automation", "off": true }
+        ],
+        "ctaLink": "#contact"
+      },
+      {
+        "name": "Growth",
+        "price": "R9,500",
+        "subtext": "/mo",
+        "setup": "+ R3,500 once-off setup · Ad budget not included",
+        "isFeatured": true,
+        "features": [
+          { "text": "Custom High-Performance Website" },
+          { "text": "Full Google Ads Management" },
+          { "text": "Aggressive Competitor Conquesting" },
+          { "text": "AI WhatsApp Responder Automation" },
+          { "text": "Live ROI Tracking Dashboard" },
+          { "text": "Monthly Strategy Calls" }
+        ],
+        "ctaLink": "#contact"
+      },
+      {
+        "name": "Scale",
+        "price": "R14,500",
+        "subtext": "/mo",
+        "setup": "Website + setup included · Ad budget paid directly to Google",
+        "features": [
+          { "text": "Custom High-Performance Website" },
+          { "text": "Full Google Ads Management" },
+          { "text": "Meta Ads B2B Retargeting" },
+          { "text": "Full AI WhatsApp Automation" },
+          { "text": "Live ROI Tracking Dashboard" },
+          { "text": "Monthly Strategy Calls" }
+        ],
+        "ctaLink": "#contact"
+      }
+    ]
+  },
+  "contact": {
+    "headingHtml": "Ready to capture<br/>that <em className=\"text-agency-accent not-italic\">R262,500?</em>",
+    "paragraph": "The competition isn't waiting. Let's lock down the Mpumalanga market before they do.",
+    "ctaText": "Approve Strategy & Start"
+  }
+}

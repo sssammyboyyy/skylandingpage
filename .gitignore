@@ -13,3 +13,15 @@ env/
 # Local env files (real values live in .env.local which is gitignored)
 .env
 .env.*
+
+# Local Netlify folder
+.netlify
+
+# Node
+node_modules/
+.next/
+tmp/
+scratch/
+*.log
+.cursor/
+.vscode/
