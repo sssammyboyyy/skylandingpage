@@ -191,25 +191,88 @@ export default function App() {
         </div>
       </div>
 
+      {/* Competitors (Pincer Movement) */}
+      <div className="py-20 px-10 bg-white">
+        <div className="max-w-[880px] mx-auto">
+          <div className="text-[11px] font-bold uppercase tracking-widest text-blue-800 mb-3">The Advantage</div>
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight leading-tight">{clientData.competitors.title}</h2>
+          <p className="text-gray-500 text-base max-w-[580px] mb-12">{clientData.competitors.subtitle}</p>
+          
+          <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+            <div className="grid grid-cols-3 bg-[#f0f4ff] font-bold text-[11px] uppercase tracking-widest text-blue-800 p-4 border-b border-gray-200">
+              <div className="col-span-1">Feature</div>
+              <div className="col-span-1 text-[#112240]">{clientData.clientName}</div>
+              <div className="col-span-1 text-gray-400">Local Competitors</div>
+            </div>
+            {clientData.competitors.rows.map((row, i) => (
+              <div key={i} className="grid grid-cols-3 p-5 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors">
+                <div className="col-span-1 font-semibold text-gray-900 text-sm">{row.feature}</div>
+                <div className="col-span-1 font-bold text-green-600 text-sm flex items-center gap-2">✓ {row.us}</div>
+                <div className="col-span-1 text-gray-400 text-sm flex items-center gap-2">✗ {row.them}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Roadmap */}
+      <div className="py-20 px-10 bg-[#f0f4ff]">
+        <div className="max-w-[880px] mx-auto">
+          <div className="text-[11px] font-bold uppercase tracking-widest text-blue-800 mb-3">Roadmap</div>
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight leading-tight">{clientData.roadmap.title}</h2>
+          <p className="text-gray-500 text-base max-w-[580px] mb-12">{clientData.roadmap.subtitle}</p>
+
+          <div className="relative border-l-2 border-blue-200 ml-4 md:ml-6 pb-4">
+            {clientData.roadmap.steps.map((step, i) => (
+              <div key={i} className="mb-10 ml-8 relative">
+                <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-blue-600"></div>
+                <div className="text-[11px] font-bold uppercase tracking-widest text-blue-600 mb-1">{step.time}</div>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h4>
+                <p className="text-sm text-gray-500 leading-relaxed max-w-[500px]">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Risk (Peace of Mind) */}
+      <div className="py-20 px-10 bg-white">
+        <div className="max-w-[880px] mx-auto">
+          <div className="text-[11px] font-bold uppercase tracking-widest text-[#f0a500] mb-3">Peace of Mind</div>
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight leading-tight" dangerouslySetInnerHTML={{__html: clientData.risk.title}} />
+          <p className="text-gray-500 text-base max-w-[580px] mb-12">{clientData.risk.subtitle}</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {clientData.risk.cards.map((card, i) => (
+              <div key={i} className="p-8 rounded-2xl bg-[#f8f9fa] border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="text-3xl mb-4">{card.icon}</div>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{card.title}</h4>
+                <p className="text-sm text-gray-500 leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Pricing */}
       <div id="packages" className="py-20 px-10 bg-[#f0f4ff]">
         <div className="max-w-[880px] mx-auto">
           <div className="text-[11px] font-bold uppercase tracking-widest text-blue-800 mb-3">Investment</div>
           <h2 className="text-4xl font-extrabold text-gray-900 mb-12 tracking-tight leading-tight">Clear packages.<br/>No hidden surprises.</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {clientData.pricing.tiers.map((tier, i) => (
-              <div key={i} className={`relative p-8 rounded-3xl border shadow-sm ${tier.isFeatured ? 'bg-[#112240] border-[#112240] shadow-xl' : 'bg-white border-gray-200'}`}>
+              <div key={i} className={`relative p-8 rounded-3xl border shadow-sm ${tier.isFeatured ? 'bg-[#112240] border-[#112240] shadow-xl md:-mt-4 md:mb-4' : 'bg-white border-gray-200 mt-4'}`}>
                 {tier.isFeatured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f0a500] text-black text-[11px] font-bold tracking-widest px-4 py-1 rounded-full uppercase">
                     ★ Recommended
                   </div>
                 )}
-                <div className={`text-[11px] font-bold uppercase tracking-widest mb-4 ${tier.isFeatured ? 'text-white/50' : 'text-gray-400'}`}>{tier.name}</div>
+                <div className={`text-[11px] font-bold uppercase tracking-widest mb-4 ${tier.isFeatured ? 'text-[#f0a500]' : 'text-gray-400'}`}>{tier.name}</div>
                 <div className={`text-4xl font-extrabold tracking-tight mb-1 ${tier.isFeatured ? 'text-white' : 'text-gray-900'}`}>
                   {tier.price} <span className={`text-lg font-medium tracking-normal ${tier.isFeatured ? 'text-white/50' : 'text-gray-500'}`}>{tier.subtext}</span>
                 </div>
-                <div className={`text-xs pb-5 border-b mb-6 ${tier.isFeatured ? 'text-white/50 border-white/10' : 'text-gray-500 border-gray-100'}`}>
+                <div className={`text-xs pb-5 border-b mb-6 ${tier.isFeatured ? 'text-white/20 border-white/10' : 'text-gray-500 border-gray-100'}`}>
                   {tier.setup}
                 </div>
                 <ul className="flex flex-col gap-3 mb-8">
@@ -232,13 +295,30 @@ export default function App() {
       </div>
 
       {/* Final CTA */}
-      <div className="bg-[#0d1b2a] py-24 px-10 text-center">
+      <div className="bg-[#112240] py-24 px-10 text-center">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4" dangerouslySetInnerHTML={{__html: clientData.contact.headingHtml}} />
         <p className="text-white/60 max-w-[480px] mx-auto mb-10">{clientData.contact.paragraph}</p>
-        <a href={clientData.whatsappLink} className="inline-flex bg-green-600 hover:bg-green-500 text-white font-bold text-sm px-8 py-4 rounded-xl transition-transform hover:-translate-y-px">
+        <a href={clientData.whatsappLink} className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold text-base px-8 py-4 rounded-xl transition-transform hover:-translate-y-px shadow-lg shadow-green-900/20">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.562 4.14 1.537 5.875L0 24l6.312-1.516C8.04 23.456 9.982 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.664-.513-5.197-1.407l-.371-.22-3.747.9.935-3.646-.241-.376C2.511 15.677 2 13.896 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           {clientData.contact.ctaText}
         </a>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-[#091223] text-white/50 py-12 px-10 border-t border-white/10">
+        <div className="max-w-[880px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#112240] to-blue-800 text-white flex items-center justify-center font-bold">J</div>
+            <div>
+              <div className="text-white font-bold text-sm">{clientData.footer.agentName}</div>
+              <div className="text-xs">{clientData.footer.agentTitle}</div>
+            </div>
+          </div>
+          <div className="text-xs text-center md:text-right max-w-[300px] leading-relaxed">
+            {clientData.footer.confidentialText}
+          </div>
+        </div>
+      </footer>
 
     </div>
   );
